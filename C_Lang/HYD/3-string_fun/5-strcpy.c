@@ -12,7 +12,7 @@ int strrcpy(char str1[],char str2[])
 int main()
 {
         char str1[20];
-        char str2[20];
+        char str2[20]="masters";
         printf("\nenter 1 strings\n");
         scanf("%s",str1);
         strrcpy(str1,str2);

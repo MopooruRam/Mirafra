@@ -1,7 +1,7 @@
 #include<stdio.h>
 void neg(int n)
 {
-	if((n>>31)&1==1)
+	if(((n>>31)&1)==1)
 	printf("negative num");
 	else
 	printf("positive num");
