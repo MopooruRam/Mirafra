@@ -1,6 +1,14 @@
- void closeAccount(Account *account);
-Account* searchAccount(char* user_name ,int user_pass);
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "account.h"
+Account *head;
+ 
+void closeAccount(Account *account);
+Account* searchAccount(char* user_name ,char* user_pass);
 char user_menu(Account* Current_account);
+void deposit(Account *account, float amount);
+void withdraw(Account *account, float amount);
 
 
 void user_login()
@@ -27,7 +35,7 @@ void user_login()
 
 
 }
-Account* searchAccount(char* user_name ,int user_pass)
+Account* searchAccount(char* user_name ,char* user_pass)
 {
 	Account *temp = head;
 	do
@@ -144,6 +152,29 @@ void closeAccount(Account *account) {
 			temp=temp->Next;
 		}
 	}
+
+}
+void deposit(Account *account, float amount) 
+{
+
+	account->balance += amount;
+	printf("Amount %.2f deposited successfully.\n", amount);
+}
+
+
+void withdraw(Account *account, float amount) 
+{
+
+	if (amount > account->balance) 
+	{
+		printf("Insufficient balance.\n");
+	} 
+	else 
+	{
+		account->balance -= amount;
+		printf("Amount %.2f withdrawn successfully.\n", amount);
+	}
+
 
 }
 
