@@ -14,7 +14,7 @@ Account *head;
 
 int Admin_menu()
 {
-	char choice;
+	int choice;
 
 
 
@@ -204,6 +204,5 @@ void Account_sel()
         }
         Temp = Temp->Next ;
     }
-    printf("\n Account Not Found");
+     printf("\n Account Not Found");
 }
-

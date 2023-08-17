@@ -8,6 +8,7 @@ int main()
 	int c=1;
 	int choice;
 	do{
+		//user menu
 
 		printf("\n\t\t\t\t Mirafra Banking System\t\t\t\t\t\n");
 		printf("1. Create Account\n");
