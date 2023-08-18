@@ -16,7 +16,7 @@ int Admin_menu()
 {
 	int choice;
 
-
+//giving admin options like search the account and select the account and exit
 
 
 
@@ -55,13 +55,14 @@ int admin_login()
 
 	char admin_pass[20] ;
 	char admin_name[20] ;
+//we have to collect from admin whether the person is admin or not?
 
 	printf("Enter the Admin name : ");
 	scanf("%s",admin_name);
 
 	printf("Enter the Admin Password : ");
 	scanf("%s",admin_pass);
-
+//after collecting the admin name and password we have to compare
 	if((strcmp("Mirafra",admin_name)))
 	{
 		printf("*********Wrong Admin Name**********\n");

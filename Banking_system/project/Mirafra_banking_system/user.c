@@ -16,18 +16,19 @@ void user_login()
 //user login
 	char user_pass[20] ;
 	char user_name[20] ;
-
+//Taking input from user name and user password
 	printf("Enter the user name : ");
 	scanf("%s",user_name);
 
 	printf("Enter the user Password : ");
 	scanf("%s",user_pass);
 
-
+//checking the what ever the user name and password is matching or not and the result is stored in *ret
 	Account* ret =  searchAccount(user_name,user_pass) ;
-
+//return ret is non zero
 	if(ret != 0)
 	{
+//if the account is blocked then go the else case
 		if(!(ret->isBlocked))
 			user_menu(ret);
 		else
@@ -68,7 +69,7 @@ char user_menu(Account* Current_account)
 	int choice;
 	float amount = 0.00;
 	int month, year;
-
+//giving options to the user for different actions like withdraw deposit close account and view balance
 
 	do {
 		printf("\nAccount holder : %s \nAccount number %s\n\n",Current_account->name , Current_account->bankAccount );
